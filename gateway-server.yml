@@ -12,6 +12,12 @@ spring:
             - Path=/auth/**
           filters:
             - AddResponseHeader=X-Powered-By, CodeWithBisky
+        - id: user-route
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**
+          Filters:
+            - AddResponseHeader=X-Powered-By, CodeWithBisky
         - id: music-route
           uri: lb://music-service
           predicates:
