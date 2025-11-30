@@ -9,12 +9,12 @@ jwt:
 
 keycloak:
   realm: bisky-music
-  domain: keycloak.codewithbisky.com
+  domain: localhost:9081
   adminClientId: admin-cli
-  adminClientSecret: Sr2cyqeesLrSN0AvbRfgjwU8N9Skx
+  adminClientSecret: TEtZtd6d22kaWEV7tFcxxAf3WHoYe85x
   client: authenticationClientId
   urls:
-    auth: https://${keycloak.domain}
+    auth: http://${keycloak.domain}
 
 spring:
   profile:
